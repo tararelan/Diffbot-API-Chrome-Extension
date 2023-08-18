@@ -1,0 +1,34 @@
+{
+    "manifest_version": 3,
+    "name": "Diffbot Data Downloader",
+    "description": "Downloads data from the current URL using the Diffbot API",
+    "version": "1.0",
+    "author": "Tara Relan",
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "Diffbot API Downloader"
+    },
+    "permissions": [
+        "activeTab",
+        "downloads",
+        "scripting"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "externally_connectable": {
+        "matches": [
+            "https://reebok.in/*"
+        ]
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
+}
