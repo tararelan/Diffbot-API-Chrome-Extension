@@ -5,7 +5,7 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
 });
 
 function fetchData() {
-    const apiKey = "bfbc1ae0a7bb4d86b5603688244cb5ff";
+    const apiKey = "KEY";
 
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
         const currentUrl = tabs[0].url;
